@@ -14,6 +14,26 @@ The project went through six stages with each stage validating and/or summarizin
 
 The relative directory structure was kept the same as the one used in my JetBrains Academy solution.
 
+The application is started by running `easyrider.py`.
+
+### Validation Logic
+
+In addition to the other validation logic present, the `Stop` class has generalized field validation logic configured with a structure like the following:
+
+```
+    FIELDS = {
+        'bus_id': {'type': int, 'required': True, 'regex': re.compile(r'\d+')},
+        'stop_id': {'type': int, 'required': True, 'regex': re.compile(r'\d+')},
+        'stop_name': {'type': str, 'required': True,
+                      'regex': re.compile(r'[A-Z][\w\s.]+(Road|Avenue|Boulevard|Street)')},
+        'next_stop': {'type': int, 'required': True, 'regex': re.compile(r'\d+')},
+        'stop_type': {'type': str, 'required': False, 'regex': re.compile(r'[SOF]?')},
+        'a_time': {'type': str, 'required': True, 'regex': re.compile(r'([0-1][0-9]|2[0-3]):[0-5][0-9]')}
+    }
+```
+
+Fields are checked for data type, being required and format.
+
 ### Saving / Loading Data
 
 The requirements could be vague at times. To allow replaying of incoming bus schedule data for debugging, I added an easy way to save and load bus schedule data. This is done via a config file (`config.json`) which looks like the following:
