@@ -30,19 +30,21 @@ The config file is used as follows:
 
 1. Set `json_file_path` to the directory you would like to save schedule data to.
 
-2. Set `save_schedule` to true to save incoming schedule data.
+2. Set `fixed_data_number` to 0 to indicate schedule data should be input versus read from a prior save file.
 
-3. Check your solution with JetBrains Academy.
+3. Set `save_schedule` to true to save incoming schedule data.
 
-4. You will now have a file named `schedule.json` in your directory.
+4. Check your solution with JetBrains Academy.
 
-5. Add an '_' + number to the end of `schedule.json`. For example: `schedule_1.json`.
+5. You will now have a file named `schedule.json` in your directory.
 
-6. Set `fixed_data_number` to the number you used.
+6. Add an '_' + number to the end of `schedule.json`. For example: `schedule_1.json`.
 
-7. You can now run the application in dev mode using the saved data. Adjust the logic until you get the desired application behavior.
+7. Set `fixed_data_number` to the number you used.
 
-8. Set `fixed_data_number` back to 0 to allow the application to go back to receiving incoming schedule data.
+8. You can now run the application in dev mode using the saved data. Adjust the logic until you get the desired application behavior.
+
+9. Set `fixed_data_number` back to 0 to allow the application to go back to receiving incoming schedule data.
 
 ### Example Bus Schedule
 
